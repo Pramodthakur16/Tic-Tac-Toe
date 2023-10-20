@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(to right, white, rgb(164, 213, 219) );
+}
+
+.heading{
+    background: linear-gradient(to right, white, purple 70%);
+    color: rgb(31, 36, 56);
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gameContainer{
+    background: linear-gradient(to right, white, rgb(164, 213, 219) );
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    /* margin-top: 40px; */
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,10vw);
+}
+
+.box{
+    border: 2px solid black;
+    font-size: 6vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover {
+    background: rgb(206, 182, 228);
+}
+
+.gameInfo {
+    margin-left: 30px;
+    padding: 0px 30px;
+}
+
+.imgBox img{
+    width: 0;
+    margin-top: 10px;
+    transition: width 1s ease-in-out;
+}
+
+.br-0 {
+    border-right: 0;
+}
+
+.bl-0 {
+    border-left: 0;
+}
+
+.bb-0 {
+    border-bottom: 0;
+}
+
+.bt-0 {
+    border-top: 0;
+}
+
+.info {
+    font-size: 22px;
+    margin: 0px 20px;
+}
+
+#reset {
+    margin: 20px 14px;
+    padding: 12px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    /* background: rgb(206, 182, 228); */
+    font-size: 17px;
+    font-weight: 700;
+    /* border: none; */
+}
+
+#reset:hover {
+    background-color: rgb(206, 182, 228);
+    /* color: aliceblue; */
+}
+
+.line{
+    background-color: black;
+    height: 3px;
+    width: 0;
+    position: absolute;
+    background-color: #911d91;
+    transition: width 1s ease-in-out;
+}
+
+@media screen and (max-width: 950px)
+{
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin-top: 34px;
+    }
+    .gameInfo h1{
+        font-size: 1.5rem;
+    }
+    .container { 
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+}
